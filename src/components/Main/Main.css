@@ -1,0 +1,237 @@
+.main {
+  flex: 1;
+  min-height: 100vh;
+  padding-bottom: 15vh;
+  position: relative;
+
+}
+
+.main .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  padding: 20px;
+  color: #585858;
+}
+
+.main .nav img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.main .greet {
+  margin: 50px 0px;
+  font-size: 56px;
+  color: #c4c7c5;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.main .greet span {
+  background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 30px 0px;
+}
+
+.main .card {
+  height: 200px;
+  padding: 15px;
+  background-color: #f0f4f9;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.main .card img {
+  width: 35px;
+  padding: 5px;
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.main .card p {
+  color: #585858;
+  font-size: 17px;
+}
+
+.main .card:hover {
+  background-color: #dfe4ea;
+}
+
+.main-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  padding: 0px 20px;
+  margin: auto;
+}
+
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20PX;
+  background-color: #F0F4F9;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.search-box img {
+  width: 24px;
+  cursor: pointer;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.search-box div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main .bottom-info {
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.result {
+  padding: 0 5%;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.result::-webkit-scrollbar {
+  display: none;
+}
+
+.result-title {
+  margin: 40px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.result img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.result-data {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loader hr {
+  border-radius: 4px;
+  border: none;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #93d7ff, #ffffff, #9ed7ff);
+  background-size: 800px 50px;
+  height: 20px;
+  animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0px
+  }
+
+  ;
+
+  100% {
+    background-position: 800px 0px
+  }
+}
+
+.result-data p {
+  /* font-family: 'Poppins', sans-serif; */
+  color: #3e3e3e;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+/* Original CSS here */
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  /* CSS adjustments for small screens */
+  .main-container {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .greet {
+    font-size: 32px; /* Decrease font size for smaller screens */
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust card grid for smaller screens */
+  }
+
+  .main-bottom {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .search-box {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .search-box input {
+    width: calc(100% - 40px); /* Adjust input width for smaller screens */
+  }
+
+  .bottom-info {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+}
+
+/* Media query for screens between 600px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* CSS adjustments for medium screens */
+  .main-container {
+    max-width: 800px; /* Adjust max-width for medium screens */
+  }
+}
+
+/* Media query for screens larger than 900px */
+@media (min-width: 901px) {
+  /* CSS adjustments for large screens */
+  .main-container {
+    max-width: 1000px; /* Adjust max-width for large screens */
+    margin: auto; /* Center align content */
+  }
+}
+
